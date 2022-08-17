@@ -3,8 +3,8 @@
     import Card from "./Card.svelte";
     import RatingSelect from "./RatingSelect.svelte";
     import { v4 as uuidv4 } from "uuid";
-import { FeedbackStore } from "../stores/feedback";
-   
+    import { FeedbackStore } from "../stores/feedback";
+
     let minValue = 10; //min length for message
     let text = "";
     let rating = 10;
@@ -22,17 +22,17 @@ import { FeedbackStore } from "../stores/feedback";
             rating: +rating,
         };
 
-		FeedbackStore.update((currentFeedbackList)=>{
-            return [newFeedback, ...currentFeedbackList]
-        })
+        FeedbackStore.update((currentFeedbackList) => {
+            return [newFeedback, ...currentFeedbackList];
+        });
         rating = 10;
         text = "";
-	};
+    };
 </script>
 
 <main>
     <Card>
-        <RatingSelect on:rating-select={handleSelect} selected={rating}/>
+        <RatingSelect on:rating-select={handleSelect} selected={rating} />
         <header>
             <h2>How would you rate your service with us?</h2>
         </header>
