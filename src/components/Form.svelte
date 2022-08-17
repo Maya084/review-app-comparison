@@ -3,9 +3,8 @@
     import Card from "./Card.svelte";
     import RatingSelect from "./RatingSelect.svelte";
     import { v4 as uuidv4 } from "uuid";
-    import { createEventDispatcher } from "svelte";
+import { FeedbackStore } from "../stores/feedback";
    
-    const dispatch = createEventDispatcher();
     let minValue = 10; //min length for message
     let text = "";
     let rating = 10;
@@ -14,7 +13,7 @@
     const handleSelect = (e) => (rating = e.detail);
 
     const handleSubmit = () => {
-        if (text.trim().length <= minValue) {
+        if (text.trim().length < minValue) {
             return;
         }
         const newFeedback = {
@@ -23,11 +22,12 @@
             rating: +rating,
         };
 
-        dispatch('new-review', newFeedback);
-
+		FeedbackStore.update((currentFeedbackList)=>{
+            return [newFeedback, ...currentFeedbackList]
+        })
         rating = 10;
         text = "";
-    };
+	};
 </script>
 
 <main>
