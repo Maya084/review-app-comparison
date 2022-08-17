@@ -26,7 +26,8 @@
   },
   "dependencies": {
     "commitizen-emoji": "^1.0.5",
-    "sirv-cli": "^2.0.0"
+    "sirv-cli": "^2.0.0",
+    "uuid": "^8.3.2"
   },
   "config": {
     "commitizen": {

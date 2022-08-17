@@ -31,10 +31,15 @@
 		const itemId = e.detail;
 		feedbacks = feedbacks.filter((item) => item.id !== itemId);
 	};
+
+	const addNewReview = (e) => {
+		feedbacks = [e.detail, ...feedbacks];
+		console.log(e.detail);
+	};
 </script>
 
 <main class="container">
-	<Form />
+	<Form on:new-review={addNewReview} />
 	<Stats {count} {average} />
 	<List {feedbacks} on:delete-feedback={deleteFeedback} />
 </main>
