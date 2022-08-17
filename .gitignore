@@ -1,1 +1,27 @@
 /node_modules
+
+# build folder
+dist/
+build/
+
+# logs
+logs/
+.cache
+.DS_Store
+npm-debug.log
+
+# process data
+.pid
+pids
+.pid-lock
+
+# Coverage & Test
+coverage
+
+# Environment files
+.dot
+
+# Editor and other files
+.vscode
+*.tgz
+.eslintcache
