@@ -33,6 +33,9 @@
         text-align: center;
         background-color: rgb(157, 63, 219);
         font-size: 19px;
+        box-shadow: 5px 6px 9px 2px rgba(0, 0, 0, 0.03);
+        -webkit-box-shadow: 5px 6px 9px 2px rgba(0, 0, 0, 0.03);
+        -moz-box-shadow: 5px 6px 9px 2px rgba(0, 0, 0, 0.03);
     }
 
     .close {

@@ -1,6 +1,6 @@
 <script lang="ts">
-	import FeedbackList from "./components/FeedbackList.svelte";
-	import FeedbackStats from "./components/FeedbackStats.svelte";
+	import List from "./components/List.svelte";
+	import Stats from "./components/Stats.svelte";
 
 	let feedbacks = [
 		{
@@ -32,9 +32,9 @@
 	};
 </script>
 
-<main>
-	<FeedbackStats {count} {average} />
-	<FeedbackList {feedbacks} on:delete-feedback={deleteFeedback} />
+<main class="container">
+	<Stats {count} {average} />
+	<List {feedbacks} on:delete-feedback={deleteFeedback} />
 </main>
 
 <style>
