@@ -5,7 +5,7 @@
 
 <main>
     <div class="stats">
-        <h3>Reviews: {count.toFixed(2)}</h3>
+        <h3>Reviews: {count}</h3>
         <h3>Average rating: {average.toFixed(2)}</h3>
     </div>
 </main>

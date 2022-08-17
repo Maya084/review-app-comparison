@@ -1,6 +1,7 @@
 <script lang="ts">
 	import List from "./components/List.svelte";
 	import Stats from "./components/Stats.svelte";
+	import Form from "./components/Form.svelte";
 
 	let feedbacks = [
 		{
@@ -33,6 +34,7 @@
 </script>
 
 <main class="container">
+	<Form />
 	<Stats {count} {average} />
 	<List {feedbacks} on:delete-feedback={deleteFeedback} />
 </main>
