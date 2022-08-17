@@ -17,7 +17,7 @@
     const onChange = (e) => {
         dispatch("rating-select", e.currentTarget.value);
     };
-    let selected = 10;
+    export let selected = 10;
 </script>
 
 <main>

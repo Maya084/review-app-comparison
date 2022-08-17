@@ -32,7 +32,7 @@
 
 <main>
     <Card>
-        <RatingSelect on:rating-select={handleSelect} />
+        <RatingSelect on:rating-select={handleSelect} selected={rating}/>
         <header>
             <h2>How would you rate your service with us?</h2>
         </header>

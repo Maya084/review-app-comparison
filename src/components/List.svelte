@@ -7,7 +7,7 @@
 
 <main>
     {#each feedbacks as fb (fb.id)}
-        <div transition:fade>
+        <div in:scale={{ duration: 500 }} out:fade={{ duration: 500 }}>
             <Feedback item={fb} on:delete-feedback />
         </div>
     {/each}
